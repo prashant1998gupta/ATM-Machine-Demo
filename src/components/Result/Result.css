@@ -1,0 +1,73 @@
+.Result {
+    background-color: #b950b9;
+    display: table-cell;
+    width: 100%;
+    height: 100vh;
+    vertical-align: middle;
+}
+
+.Result > h1 {
+    color: white;
+    padding: 20px;
+}
+
+#cash {
+    animation : hop 1s infinite;
+}
+
+#success {
+    animation : fadeIn 500ms;
+}
+
+#warning {
+    animation: opac 1s;
+}
+  
+@media (max-width: 700px) {
+    .Result {
+        display: inline-block;
+        min-height: 400px;
+        padding-top: 50px;
+    }
+}
+
+@keyframes hop {
+    from {
+        transform: translateY(2em);
+    }
+    50% {
+        transform: translateY(0em);
+    }
+    to {
+        transform: translateY(2em);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity:0;
+        transform:  rotate(0deg) scaleX(0) scaleY(0) ;
+    }
+    to {
+        opacity:1;
+        transform:  rotate(0deg) scaleX(1) scaleY(1) ;
+    }
+}
+
+@keyframes opac {
+    from {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.25;
+    }
+    to {
+        opacity: 1;
+    }
+}
